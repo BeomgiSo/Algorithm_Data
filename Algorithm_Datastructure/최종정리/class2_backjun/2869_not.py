@@ -19,7 +19,7 @@ oneday= A-B
 days = (V-A)//oneday
 # 이나머지가 있을경우 몫+1
 # v-a/a-b 
-if (V-A)%oneday > 0:
-    print(days+1)
+if (V-A)%oneday != 0:
+    print(days+2)
 else:
-    print(days)
+    print(days+1)

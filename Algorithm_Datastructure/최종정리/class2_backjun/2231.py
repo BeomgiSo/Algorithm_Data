@@ -19,21 +19,34 @@
 예제 출력 1 
 198
 '''
-import sys
-input = sys.stdin.readline
+# import sys
+# input = sys.stdin.readline
 
-N = int(input())
+# N = int(input())
 
-sum_data = 0
-for i in range(1,N+1):
-    temp = i + sum(map(int,str(i)))
+# sum_data = 0
+# for i in range(1,N+1):
+#     temp = i + sum(map(int,str(i)))
     
-    if temp == N:
-        sum_data = i
-        break
+#     if temp == N:
+#         sum_data = i
+#         break
 
-    if temp > N:
+#     if temp > N:
+#         print(0)
+#         break
+
+# print(sum_data)
+N=int(input())
+i = 1
+while True:
+    sum_ = 0
+    temp = sum(list(map(int,str(i))))
+    temp += i
+    if temp == N:
+        print(i)
+        break
+    elif i >= N:
         print(0)
         break
-
-print(sum_data)
+    i+=1
